@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+    ul{
+        padding: 0px;
+        list-style-type: none;
+    }
+    li{
+        margin: 5px 0;
+    }
+</style>
+<body>
+    <h1 id="main heading">Simple heading text</h1>
+    <p class="description">This is the paragraph of Aditya Kumar</p>
+    <ul>
+        <li>ADITYA KUMAR</li>
+        <li>2310997013</li>
+        <li>BCA 4C</li>
+    </ul>
+    <button onclick="action()">click me</button>
+    <script>
+        function action(){
+            const heading = document.querySelector('h1');
+            if(heading){
+                heading.textContent = "heading update by JS";
+                heading.style.color = "red";
+                heading.style.frontsize="2em";
+            }
+            const firstparagraph = document.querySelector(".description");
+            if (firstparagraph){
+                firstparagraph.textContent= "now the paragraph is updated by js";
+                firstparagraph.style.backgroungcolor = "#f0f8ff";
+            }
+            const listitem = document.querySelector("ul li");
+            listitem.forEach(item,index => {
+                item.textContent = "player$(index + 1}";
+                item.style.fontweight = "bold";
+                
+            });
+            const newDiv = document.createElement("div");
+            newDiv.textContent = "this is a new dynamically created div";
+            newDiv.style.padding = "10px";
+            newDiv.style.border ="1px splid #ccc";
+            const body = document.body;
+            body.appendChild(newDiv);
+            const button = document.querySelector("button");
+            if(button){
+                button.addEventListener("click", () => {
+                    alert("button was clicked");
+                
+            });
+        }
+    }
+    </script>
+</body>
+</html>
